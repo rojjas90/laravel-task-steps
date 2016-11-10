@@ -5,7 +5,7 @@
         <title>Show task</title>
     </head>
     <body>
-        <h1>This is the task {{ $task }}</h1>
+        <h1>This is the task "{{ $task->name }}"</h1>
         <form class="" action="index.html" method="post">
             <div class="">
                 <label for="name">Field 1</label>

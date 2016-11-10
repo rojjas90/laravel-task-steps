@@ -52,6 +52,9 @@ class TaskController extends Controller
      */
     public function show($task)
     {
+        //Obtengo el task de la base de datos
+        $task = DB::table('tasks')->where('id',$task)->first();
+
         return view('tasks.show',compact('task'));
     }
 

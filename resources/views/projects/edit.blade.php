@@ -21,7 +21,7 @@
             </div>
             <div class="">
                 <label for="name">Field 4</label>
-                <input type="text" name="name" value="">
+                <input type="text" name="name" value="{{ $task->name }}">
             </div>
             <button type="button" name="button">Edit</button>
         </form>
