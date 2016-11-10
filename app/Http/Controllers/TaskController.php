@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,14 +17,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //Estamos fingiendo las tareas
-        $tasks = [
-            'tarea 1',
-            'tarea 2',
-            'tarea 3',
-            'tarea 4',
-            'tarea 5'
-        ];
+        //Obteniendo tareas de la BD
+        $tasks = DB::table('tasks')->get();
 
         return view('tasks.list',compact('tasks'));
     }

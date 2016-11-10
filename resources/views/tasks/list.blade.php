@@ -8,7 +8,7 @@
         <h1>All tasks</h1>
         <ul>
             @foreach ($tasks as $task)
-                <li>{{ $task }}</li>
+                <li>{{ $task->name }}</li>
             @endforeach
         </ul>
     </body>
